@@ -12,6 +12,16 @@ int main(int argc, char *argv[]) {
 	int calcul;
 	int option;
 	
+	if (arg[]==c){
+		codage()
+
+	}
+
+	if (arg[]==d){
+
+	}
+	
+
 	/* recupération sur la ligne de commande des noms de fichiers et option (-c pour codage
 		-d pour décodage : message cle message_calculé 
 	
@@ -40,27 +50,3 @@ int main(int argc, char *argv[]) {
 	fermefichier(datafile);
 	return EXIT_SUCCESS;
 }
-
-char cle(int nbrchar){
-
-	char cle[nbrchar];
-
-	for(a=0;a<nbrchar;a++)
-		{
-			grille[a]=0;
-		}
-		
-		for(a=0;a<nbrchar;a++)
-		{
-			place = rand()%nbrchar;
-			if(grille[place]!=0)
-			{
-				i--;
-			}
-			else
-			{
-				grille[place]=i;
-			}
-		}
-	return cle;
-	}
