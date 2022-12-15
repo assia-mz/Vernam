@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
+int decodage(int argc, char *argv[]) {
 	FILE *f_m, *f_k, *f_mdc; /* strcutures permettant, une fois FOPEN 
 	exécuté de recupérer des informations pour manipuler les fichiers
 	en C */
@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 	int k1;
 	int calcul;
 	
-	char * cheminFic_m = "message_c.txt";
+	char * cheminFic_m = argv[1];
 	f_m = fopen(cheminFic_m, "r");
 	if (f_m==NULL){
 		printf("L'ouverture du fichier à échouer. Veuillez verifier l'existence de celui-ci.\n");
