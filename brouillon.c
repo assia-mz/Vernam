@@ -19,7 +19,7 @@ char main(){
 			}
 
 	fichier = fopen ("cle.txt", "wb");
-        if (!fichier) {
+        if (fichier) {
         	fwrite (cle, sizeof(char), nbrchar, fichier);
         } else {
         	return EXIT_FAILURE;
