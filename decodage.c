@@ -1,30 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int decodage(char *argv[]) {
-	FILE *f_m, *f_k, *f_mdc; /* strcutures permettant, une fois FOPEN 
+int main(char * argv[]) {
+	FILE* f_m, *f_k, *f_mdc; /* strcutures permettant, une fois FOPEN 
 	exécuté de recupérer des informations pour manipuler les fichiers
 	en C */
-	int c;
-	int k1;
-	int calcul;
+	int c, k1,calcul;
 	
 	char * cheminFic_m = argv[1];
-	char * cheminFic_k = "cle.txt";
-	char * cheminFic_mdc = "message_dc.txt";
-
 	f_m = fopen(cheminFic_m, "r");
-	if (!f_m){
+	if (f_m==NULL){
 		printf("L'ouverture du fichier a decode echouer.\n");
 	}
-
+	
+	char * cheminFic_k = "cle.txt";
 	f_k = fopen(cheminFic_k, "r");
-	if (!f_k){
+	if (f_k==NULL){
 		printf("L'ouverture du fichier clé a echouer.\n");
 	}
 	
-	f_mdc = fopen(cheminFic_mdc, "wd");
-	if (!f_mdc){
+	char * cheminFic_mdc = "message_dc.txt";
+	f_mdc = fopen(cheminFic_mdc, "w");
+	if (f_mdc==NULL){
 		printf("L'ouverture du fichier decode échouer.\n");
 	}
 	
