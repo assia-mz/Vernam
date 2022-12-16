@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(char * argv[]) {
+int codage(int argc, char * argv[]) {
 	FILE* f_m, *f_k, *f_mc; /* strcutures permettant, une fois FOPEN 
 	exécuté de recupérer des informations pour manipuler les fichiers
 	en C */

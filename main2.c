@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
     else if ((strcmp(argv[2],"d"))==0) {
     	printf("option d");
-    	char * cheminFic_m = argv[1];
+    	char * cheminFic_m = "message_c.txt";
 		f_m = fopen(cheminFic_m, "r");
 		if (f_m==NULL){
 			printf("L'ouverture du fichier a decode echouer.\n");
@@ -103,7 +103,7 @@ int main(int argc, char *argv[]) {
 		négative (elle vaut -1 sous Linux). */	
 		{
 			k1 = fgetc(f_k); /* fgetc lis le caractère à la position courante du flux considéré*/
-			calcul = c-k1 >= 0?c-k1:256-(c-k1);
+			calcul = c-k1 >= 0?c-k1:256-(c-k1); /* ?? */ 
 			fputc(calcul, f_mdc);
 		}
 		

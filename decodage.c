@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(char * argv[]) {
+int decodage(int argc, char * argv[]) {
 	FILE* f_m, *f_k, *f_mdc; /* strcutures permettant, une fois FOPEN 
 	exécuté de recupérer des informations pour manipuler les fichiers
 	en C */
